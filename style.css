@@ -1,0 +1,27 @@
+.mainColors {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.color {
+  width: 33px;
+  height: 33px;
+  background: attr(data-color);
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: pre-wrap;
+  text-align: center;
+  overflow: hidden;
+  font-size: 8px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  transition: all 300ms;
+  cursor: pointer;
+  transition-delay: 500ms; }
+  .color:hover {
+    padding: 0 22px;
+    transition-delay: 0; }
+
+/*# sourceMappingURL=style.css.map */

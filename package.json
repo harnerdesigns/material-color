@@ -1,0 +1,22 @@
+{
+  "name": "material-color",
+  "version": "1.0.0",
+  "description": "Material Color Picker Chrome Extension",
+  "main": "manifest.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harnerdesigns/material-color.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harnerdesigns/material-color/issues"
+  },
+  "homepage": "https://github.com/harnerdesigns/material-color#readme",
+  "devDependencies": {
+    "jquery": "^3.2.1"
+  }
+}
