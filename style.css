@@ -1,7 +1,21 @@
+hr {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 3px;
+  width: 80%; }
+
 .mainColors {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.variations {
+  display: flex;
+  flex-wrap: tion row; }
+
+.colorset {
+  display: flex;
+  flex-direction: column; }
 
 .color {
   width: 33px;
@@ -19,9 +33,22 @@
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
   transition: all 300ms;
   cursor: pointer;
-  transition-delay: 500ms; }
+  transition-delay: 500ms;
+  box-shadow: 0 1px 2px #ccc; }
   .color:hover {
-    padding: 0 22px;
     transition-delay: 0; }
+
+.sideBar {
+  float: left;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .sideBar .color {
+    color: #000;
+    cursor: none;
+    text-shadow: none;
+    font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
