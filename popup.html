@@ -31,12 +31,24 @@
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
     -->
     <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/clipboard.min.js"></script>
+    
+    <link rel="stylesheet" href="vendor/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <script src="popup.js"></script>
+
   </head>
 
   <body>
+    <header><h1>Material Color Picker</h1><nav>
+      <ul>
+        <li><a href="options.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i></a></li>
+        <li><i class="fa fa-question fa-fw" aria-hidden="true"></i></li>
+      </ul>
+    </nav></header>
+    <container>
     <div class="sideBar"><div class="color">Color</div><hr></div>
+    <div class="main">
     <div class="mainColors">
 
     </div>
@@ -44,5 +56,7 @@
     <div class="variations">
       
     </div>
+  </div>
+</container>
   </body>
 </html>

@@ -3,7 +3,8 @@
 
   "name": "Material Color Chrome",
   "description": "Color Selector in Chrome",
-  "version": "1.0",
+  "options_page": "options.html",
+  "version": "1.0.0",
   "icons": { "512": "icon.png" },
 
   "browser_action": {"default_title": "Material Color Picker",

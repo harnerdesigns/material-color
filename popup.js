@@ -15,8 +15,6 @@ var $color = (function() {
         return $color;
     })();
 
-console.log($color);
-
 $.each($color.alternateNames, function(key, data) { 
     if(this == "A100"){$('.sideBar').append("<hr>")};
     $('.sideBar').append(
@@ -27,9 +25,8 @@ $.each($color.alternateNames, function(key, data) {
 });
 
     $.each($color.mainColors, function(key, data) {
-      console.log(this.hex + key);
     $('.mainColors').append(
-        '<div class="color" style="background:'+ this.hex +'" data-hex="' + this.hex + '" id="'+ key +'">'
+        '<div class="color" data-clipboard-text="'+ color(this.hex) + '" style="background:'+ color(this.hex) +'" data-hex="' + this.hex + '" id="'+ key +'">'
         + this.name + '</div>'
     );
 
@@ -38,9 +35,50 @@ $.each($color.alternateNames, function(key, data) {
     $.each(this.alternates, function(keys, data){
         if(keys === "A100"){$('#colorset-' + key).append("<hr>")};
         $('#colorset-' + key).append(
-        '<div class="color" style="background:'+ this +'" data-hex="' + this + '" id="'+ keys +'"></div>'
+        '<div class="color" data-clipboard-text="'+ this + '" style="background:'+ this +'" title="' + this +'" data-hex="' + this + '" id="'+ keys +'"></div>'
     );
     });
 
     });
+
+
+    $(".color").click(function(){
+        alert($(this).data("hex"));
+    });
+
+new Clipboard('.color');
+
+
 });
+
+
+function color(hex){
+
+    chrome.storage.sync.get("colorOutput", function(items) {
+    if (!chrome.runtime.error) {
+      var output = items.colorOutput;
+      alert(output);
+        }
+  });
+    if(output === "rgb"){
+
+        console.log("rgb");
+        
+      }       
+      if(output === "hex"){
+        console.log("rgb");
+        hex = hex.replace(/([#])/g, "");
+      }       
+      if(output === "rgba"){
+        console.log("rgba");
+        
+      }
+        if(output === "hashHex"){
+            console.log("hashHex");
+
+            hex = hex;
+        
+      } 
+
+      return hex;
+}
