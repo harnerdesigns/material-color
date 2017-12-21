@@ -15,3 +15,9 @@ Go to ```Chrome://extensions``` and make sure ```Developer mode``` is checked.
 Click ```Load unpacked extension...``` and navigate to the folder you cloned above.
 
 ### Chrome Store download coming soon...
+
+## Donate
+
+### PayPal
+
+[![](img/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3U4LLKF93P22J)

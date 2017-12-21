@@ -50,9 +50,9 @@ $.each($color.alternateNames, function(key, data) {
             $("header").css("color", "#000");
         } else {$("header").css("color", "#fff");}
         
-
+        $("#headerAlert").stop(true, true);
         $("#headerAlert").fadeIn();
-        $("#headerAlert").html("Copied to Clipboard: " + $(this).data("hex"));
+        $("#headerAlert").html("Copied to Clipboard: " + $(this).data("clipboard-text"));
         $('#headerAlert').delay(1000).fadeOut();
     });
 
@@ -62,35 +62,37 @@ new Clipboard('.color');
 });
 
 
-function color(hex){
+function color(hex) {
 
     var output;
+    var convertedHex;
 
     chrome.storage.sync.get("colorOutput", function(items) {
-    if (!chrome.runtime.error) {
-      var output = items.colorOutput;
-      
+        if (!chrome.runtime.error) {
+            var output = items.colorOutput;
+
         }
-  });
-    console.log(output);
 
-    if(output === "rgb"){
+        if (output === "rgb") {
 
-        console.log("rgb");
-        
-      }       
-      if(output === "hex"){
-        console.log("hex");
-        hex = hex.replace(/([#])/g, "");
-      }       
-      if(output === "rgba"){
-        console.log("rgba");
-        
-      }
-        if(output === "hashHex"){
+            console.log("rgb");
+
+        }
+        if (output === "hex") {
+            console.log("hex___");
+            convertedHex = hex.replace(/([#])/g, "");
+            console.log(convertedHex);
+        }
+        if (output === "rgba") {
+            console.log("rgba");
+
+        }
+        if (output === "hashHex") {
             console.log("hashHex");
             hex = hex;
-      } 
+        }
 
-      return hex;
+        return convertedHex;
+    });
+
 }

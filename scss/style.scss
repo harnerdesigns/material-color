@@ -1,4 +1,5 @@
 $squareSize: 30px;
+$red: #f44336;
 
 body {
     display: flex;
@@ -8,6 +9,7 @@ body {
     background-color: rgba(230, 230, 230, 1);
     margin: 0;
     padding: 0;
+    min-width: 100vw;
 
     // background: url("img/icon.png") no-repeat;
     // background-size: 10%;
@@ -22,16 +24,22 @@ container {
 
 header {
     width: calc(100% - 25px);
+    min-width: 685px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
     margin: 0 0 5px 0;
     padding: 10px 25px;
-    background: #fff;
+    background: $red;
     box-shadow: 0 2px 3px transparentize(#000, 0.8);
     color: #fff;
     text-shadow: 0 1px 2px transparentize(#000, 0.8);
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
     h1 {
         font-size: 1rem;
@@ -90,7 +98,8 @@ container {
     background: #fff;
     width: $squareSize;
     height: $squareSize;
-    margin: 2px;
+
+    // margin: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,9 +120,9 @@ container {
     color: #fff;
     transition: all 300ms;
     cursor: pointer;
-    box-shadow: 0 1px 2px #ccc;
 
     &:hover {
+        box-shadow: 0 1px 2px transparentize(#000, 0.4);
         transform: scale(1.15);
     }
 
@@ -136,5 +145,35 @@ container {
         cursor: default;
         text-shadow: none;
         font-weight: bold;
+    }
+}
+
+button {
+    width: 100%;
+    margin: 0.25em;
+    background: $red;
+    border: none;
+    color: #fff;
+    font-size: 1.414rem;
+}
+
+.donationOptions {
+    display: flex;
+
+    .donationOption {
+        margin: 0 1em;
+
+        h3 {
+            text-align: center;
+        }
+    }
+}
+
+.donateButton {
+    display: block;
+    margin: 0 auto;
+
+    img {
+        height: auto;
     }
 }

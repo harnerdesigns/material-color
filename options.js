@@ -21,7 +21,8 @@ function restore_options() {
   chrome.storage.sync.get({
     colorOutput: 'hashHex'
   }, function(items) {
-    $('input[name="colorOutput"]').value = items.colorOutput;
+
+    $('input[value="' + items.colorOutput + '"]').attr('checked', true);
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);
@@ -32,7 +33,7 @@ document.body.onload = function() {
   chrome.storage.sync.get("colorOutput", function(items) {
     if (!chrome.runtime.error) {
       console.log(items);
-      
+
           }
   });
 }
