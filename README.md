@@ -18,6 +18,14 @@ Click ```Load unpacked extension...``` and navigate to the folder you cloned abo
 
 ## Donate
 
+If you like this Chrome Extension and would like to by me a beer, I'd be flattered.
+
 ### PayPal
 
 [![](img/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3U4LLKF93P22J)
+
+### Bitcoin
+1K5D3v1J36hQ3f25S3YYHVd9YpgKtUADfH
+
+### Litecoin
+LSpqVw3gDwWgBcrBarX663TwZdGZrXfmQ7
