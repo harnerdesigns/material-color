@@ -15,6 +15,8 @@ var $color = (function() {
         return $color;
     })();
 
+    $("header").css("background", $color.mainColors.red.hex);
+
 $.each($color.alternateNames, function(key, data) { 
     if(this == "A100"){$('.sideBar').append("<hr>")};
     $('.sideBar').append(
@@ -43,7 +45,15 @@ $.each($color.alternateNames, function(key, data) {
 
 
     $(".color").click(function(){
-        alert($(this).data("hex"));
+        $("header").css("background", $(this).data("hex"));
+        if ($(this).attr('id') === "a50"){
+            $("header").css("color", "#000");
+        } else {$("header").css("color", "#fff");}
+        
+
+        $("#headerAlert").fadeIn();
+        $("#headerAlert").html("Copied to Clipboard: " + $(this).data("hex"));
+        $('#headerAlert').delay(1000).fadeOut();
     });
 
 new Clipboard('.color');
@@ -63,6 +73,7 @@ function color(hex){
         }
   });
     console.log(output);
+
     if(output === "rgb"){
 
         console.log("rgb");

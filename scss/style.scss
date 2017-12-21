@@ -6,6 +6,8 @@ body {
     justify-conent: center;
     flex-direction: column;
     background-color: rgba(230, 230, 230, 1);
+    margin: 0;
+    padding: 0;
 
     // background: url("img/icon.png") no-repeat;
     // background-size: 10%;
@@ -19,22 +21,35 @@ container {
 }
 
 header {
-    width: 100%;
+    width: calc(100% - 25px);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
+    margin: 0 0 5px 0;
+    padding: 10px 25px;
+    background: #fff;
+    box-shadow: 0 2px 3px transparentize(#000, 0.8);
+    color: #fff;
+    text-shadow: 0 1px 2px transparentize(#000, 0.8);
 
     h1 {
         font-size: 1rem;
+        margin: 0;
     }
 
     nav {
         ul {
             padding: 0;
+            margin: 0;
 
             li {
                 display: inline-block;
                 font-size: 2em;
+
+                a {
+                    color: inherit;
+                }
             }
         }
     }
@@ -45,6 +60,12 @@ hr {
     border-bottom: 1px solid #ccc;
     margin: 3px auto;
     width: 95%;
+}
+
+container {
+    padding: 0 10px;
+    width: calc(100%-25px);
+    margin: 0 auto 10px;
 }
 
 .main {}
