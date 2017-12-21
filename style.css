@@ -67,8 +67,8 @@ container {
 
 .square, .color {
   background: #fff;
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
