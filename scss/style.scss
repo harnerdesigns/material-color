@@ -20,6 +20,7 @@ container {
     display: flex;
     align-items: center;
     justify-conent: center;
+    width: 100%;
 }
 
 header {
@@ -159,6 +160,10 @@ button {
 
 .donationOptions {
     display: flex;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 
     .donationOption {
         margin: 0 1em;

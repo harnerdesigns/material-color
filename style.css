@@ -11,7 +11,8 @@ body {
 container {
   display: flex;
   align-items: center;
-  justify-conent: center; }
+  justify-conent: center;
+  width: 100%; }
 
 header {
   width: calc(100% - 25px);
@@ -115,7 +116,11 @@ button {
   font-size: 1.414rem; }
 
 .donationOptions {
-  display: flex; }
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center; }
   .donationOptions .donationOption {
     margin: 0 1em; }
     .donationOptions .donationOption h3 {
