@@ -18,7 +18,7 @@ var $color = (function() {
 $.each($color.alternateNames, function(key, data) { 
     if(this == "A100"){$('.sideBar').append("<hr>")};
     $('.sideBar').append(
-        '<div class="color">'
+        '<div class="square">'
         + this + '</div>'
     );
 
@@ -26,7 +26,7 @@ $.each($color.alternateNames, function(key, data) {
 
     $.each($color.mainColors, function(key, data) {
     $('.mainColors').append(
-        '<div class="color" data-clipboard-text="'+ color(this.hex) + '" style="background:'+ color(this.hex) +'" data-hex="' + this.hex + '" id="'+ key +'">'
+        '<div class="color" data-clipboard-text="'+ color(this.hex) + '" style="background:'+ this.hex +'" data-hex="' + this.hex + '" id="'+ key +'">'
         + this.name + '</div>'
     );
 
@@ -54,19 +54,22 @@ new Clipboard('.color');
 
 function color(hex){
 
+    var output;
+
     chrome.storage.sync.get("colorOutput", function(items) {
     if (!chrome.runtime.error) {
       var output = items.colorOutput;
-      alert(output);
+      
         }
   });
+    console.log(output);
     if(output === "rgb"){
 
         console.log("rgb");
         
       }       
       if(output === "hex"){
-        console.log("rgb");
+        console.log("hex");
         hex = hex.replace(/([#])/g, "");
       }       
       if(output === "rgba"){
@@ -75,9 +78,7 @@ function color(hex){
       }
         if(output === "hashHex"){
             console.log("hashHex");
-
             hex = hex;
-        
       } 
 
       return hex;

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Color Picker Options</title>
+<script src="vendor/jquery.min.js"></script>
+</head>
+<body>
+<h1>Material Color Picker</h1>
+<h2>#HEX, HEX, RGB, RGBA?</h2>
+<input type="radio" id="colorOutput1"
+     name="colorOutput" value="hashHex" checked>
+    <label for="colorOutput1">#HEX</label>
+
+    <input type="radio" id="colorOutput2"
+     name="colorOutput" value="hex">
+    <label for="colorOutput2">HEX</label>
+
+    <input type="radio" id="colorOutput3"
+     name="colorOutput" value="rgb">
+    <label for="colorOutput3">RGB</label>    
+    <input type="radio" id="colorOutput4"
+     name="colorOutput" value="rgba">
+    <label for="colorOutput4">RGBA</label>
+
+
+<div id="status"></div>
+<button id="save">Save</button>
+
+<script src="options.js"></script>
+</body>
+</html>
