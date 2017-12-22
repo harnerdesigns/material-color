@@ -1,5 +1,11 @@
 $squareSize: 34px;
 $red: #f44336;
+$numberofColors: 19;
+$maxWidth: $squareSize * $numberofColors;
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     display: flex;
@@ -9,11 +15,21 @@ body {
     background-color: rgba(230, 230, 230, 1);
     margin: 0;
     padding: 0;
-    min-width: 100vw;
+    position: relative;
+}
 
-    // background: url("img/icon.png") no-repeat;
-    // background-size: 10%;
-    // background-position: 97% 97%;
+.pallete {
+    header {
+        h1 {
+            i {
+                visibility: hidden;
+            }
+        }
+    }
+
+    container {
+        padding: 0;
+    }
 }
 
 container {
@@ -21,21 +37,24 @@ container {
     align-items: center;
     justify-conent: center;
     width: 100%;
+    z-index: 8;
+    padding: 5px;
 }
 
 header {
-    width: calc(100% - 25px);
-    min-width: 685px;
+    width: $maxWidth;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    margin: 0 0 5px 0;
+
+    // margin: 0 0 5px 0;
     padding: 10px 25px;
     background: $red;
     box-shadow: 0 2px 3px transparentize(#000, 0.8);
     color: #fff;
     text-shadow: 0 1px 2px transparentize(#000, 0.8);
+    z-index: 9;
 
     a {
         color: inherit;
@@ -71,15 +90,8 @@ hr {
     width: 95%;
 }
 
-container {
-    padding: 0 10px;
-    width: calc(100%-25px);
-    margin: 0 auto 10px;
-}
-
 .main {
-    max-width: 90%;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .mainColors {
@@ -135,21 +147,10 @@ container {
     }
 }
 
-.sideBar {
-    float: left;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-right: 10px;
-
-    .color {
-        color: #000;
-        cursor: default;
-        text-shadow: none;
-        font-weight: bold;
-    }
+#status {
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
 }
 
 button {

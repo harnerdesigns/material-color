@@ -45,7 +45,7 @@
                         $('#colorset-' + key).append("<hr>")
                     };
                     $('#colorset-' + key).append(
-                        '<div class="color" data-clipboard-text="' + color(this, output) + '" style="background:' + this + '" title="' + this + '" data-hex="' + this + '" id="' + keys + '"></div>'
+                        '<div class="color" data-clipboard-text="' + color(this, output) + '" style="background:' + this + '" title="' + color(this, output) + '" data-hex="' + this + '" id="' + keys + '"></div>'
                     );
                 });
 
@@ -54,16 +54,16 @@
             $("header").css("background", $color.mainColors.red.hex);
 
             // Add Sidebar
-            $.each($color.alternateNames, function(key, data) {
-                if (this == "A100") {
-                    $('.sideBar').append("<hr>")
-                };
-                $('.sideBar').append(
-                    '<div class="square">' +
-                    this + '</div>'
-                );
+            // $.each($color.alternateNames, function(key, data) {
+            //     if (this == "A100") {
+            //         $('.sideBar').append("<hr>")
+            //     };
+            //     $('.sideBar').append(
+            //         '<div class="square">' +
+            //         this + '</div>'
+            //     );
 
-            });
+            // });
 
             // Bind on click
             $(".color").click(function() {
@@ -92,19 +92,15 @@
 
             switch (output) {
                 case "hashHex":
-                    console.log("Output is HashHex");
                     convertedHex = hex;
                     break;
                 case "hex":
-                    console.log("Output is hex");
                     convertedHex = convert_hex_to_hex(hex);
                     break;
                 case "rgb":
-                    console.log("Output is rgb");
                     convertedHex = convert_hex_to_rgb(hex);
                     break;
                 case "rgba":
-                    console.log("Output is rgba");
                     convertedHex = convert_hex_to_rgba(hex);
                     break;
                 default:

@@ -26,6 +26,10 @@ Let us know on the project's [GitHub Issues Page](https://github.com/harnerdesig
 *   [Clipboard.js](https://clipboardjs.com/)
 *   [Font-Awesome](http://fontawesome.io/)
 
+## About Us
+
+Harner Designs is a full service Web & Graphic Design studio. Providing Clean, Responsive, Web Sites is what we do best. Check out our Portfolio at [HarnerDesigns.com](http://harnerdesigns.com).
+
 
 ## Like the App? Wanna Buy Us A Beer?
 
