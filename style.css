@@ -53,6 +53,10 @@ container {
   width: calc(100%-25px);
   margin: 0 auto 10px; }
 
+.main {
+  max-width: 90%;
+  margin: 0 auto; }
+
 .mainColors {
   display: flex;
   align-items: center;

@@ -27,9 +27,9 @@ Let us know on the project's [GitHub Issues Page](https://github.com/harnerdesig
 *   [Font-Awesome](http://fontawesome.io/)
 
 
-## Like the App? Wanna Buy Me A Beer?
+## Like the App? Wanna Buy Us A Beer?
 
-If you like this Chrome Extension and would like to by me a beer, I'd be flattered.
+If you like this Chrome Extension and would like to by us a beer, We'd be flattered.
 
 | Paypal | Bitcoin | Litecoin |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------|------------------------------------|

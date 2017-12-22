@@ -77,7 +77,10 @@ container {
     margin: 0 auto 10px;
 }
 
-.main {}
+.main {
+    max-width: 90%;
+    margin: 0 auto;
+}
 
 .mainColors {
     display: flex;
