@@ -62,37 +62,90 @@ new Clipboard('.color');
 });
 
 
+// function color(hex) {
+
+//     var output;
+//     var convertedHex;
+
+//     chrome.storage.sync.get("colorOutput", function(items) {
+//         if (!chrome.runtime.error) {
+//             var output = items.colorOutput;
+
+//         }
+
+//         if (output === "rgb") {
+
+//             console.log("rgb");
+
+//         }
+//         if (output === "hex") {
+//             console.log("hex___");
+//             convertedHex = hex.replace(/([#])/g, "");
+//             console.log(convertedHex);
+//         }
+//         if (output === "rgba") {
+//             console.log("rgba");
+
+//         }
+//         if (output === "hashHex") {
+//             console.log("hashHex");
+//             hex = hex;
+//         }
+
+//         return convertedHex;
+//     });
+function get_output_setting(){
+var storageItems = chrome.storage.sync.get("colorOutput", function(items){return items.colorOutput});
+}
+
+
 function color(hex) {
 
     var output;
     var convertedHex;
 
-    chrome.storage.sync.get("colorOutput", function(items) {
-        if (!chrome.runtime.error) {
-            var output = items.colorOutput;
+    //get colorOutput items from local storage
+    var storageItems = chrome.storage.sync.get("colorOutput", function(items){
+    if (!chrome.runtime.error) {
+        //convert the items
+         console.log("Success!");
+         console.log(items);
+     convert_hex_to_rgb(hex);
+    }
+    });
+    console.log(storageItems);
+
+    
+    //check for runtime error
+
+}
+
+function convert_hex_to_rgb(hex){
+           console.log("converted hex: " + hex + " to rgb");
+            convertedHex = hex;
+        return convertedHex;
+    }
+
+ function convert_hex_to_rgba(hex){
+        console.log(items);
+        if (items === "rgb") {
+
+            console.log("converted hex to rgba");
+            convertedHex = hex;
 
         }
+        return convertedHex;
+    }
 
-        if (output === "rgb") {
+    function convert_hex_to_hex(hex){
+        console.log(items);
+        if (items === "rgb") {
 
-            console.log("rgb");
-
-        }
-        if (output === "hex") {
             console.log("hex___");
             convertedHex = hex.replace(/([#])/g, "");
             console.log(convertedHex);
-        }
-        if (output === "rgba") {
-            console.log("rgba");
 
         }
-        if (output === "hashHex") {
-            console.log("hashHex");
-            hex = hex;
-        }
-
         return convertedHex;
-    });
+    }
 
-}
