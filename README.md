@@ -4,6 +4,10 @@ An extension for Google Chrome that provides the Color Codes for Google's Materi
 
 ## Install 
 
+### [Download From The GOogle Chrome Store](https://chrome.google.com/webstore/detail/material-color-palette-cl/daejjicekmhkbpgahnhfmpmjhojhpane)
+
+### Install Locally
+
 Clone the repo
 
 ```
@@ -14,7 +18,7 @@ Go to ```Chrome://extensions``` and make sure ```Developer mode``` is checked.
 
 Click ```Load unpacked extension...``` and navigate to the folder you cloned above.
 
-### Chrome Store download coming soon...
+
 
 ## Run Into Issues?
 
