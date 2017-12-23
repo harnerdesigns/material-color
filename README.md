@@ -4,7 +4,7 @@ An extension for Google Chrome that provides the Color Codes for Google's Materi
 
 ## Install 
 
-### [Download From The GOogle Chrome Store](https://chrome.google.com/webstore/detail/material-color-palette-cl/daejjicekmhkbpgahnhfmpmjhojhpane)
+### [Download From The Google Chrome Store](https://chrome.google.com/webstore/detail/material-color-palette-cl/daejjicekmhkbpgahnhfmpmjhojhpane)
 
 ### Install Locally
 
