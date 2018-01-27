@@ -31,6 +31,8 @@
 
 // Generate the colors and selection based on output setting
         function add_colors(output) {
+
+            clear_colors();
         
             $.each($color.mainColors, function(key, data) {
                 $('.mainColors').append(
@@ -50,20 +52,62 @@
                 });
 
             });
+
+
+                function save_options() {
+  var color = $('input[name="colorOutput"]:checked').val();
+  chrome.storage.sync.set({
+    "colorOutput": color
+  }, function() {
+    // Update status to let user know options were saved.
+    var status = $('#headerAlert');
+    
+    status.textContent = 'Options saved.';
+      status.fadeOut();
+    
+  });
+}
+
+// Restores select box and checkbox state using the preferences
+// stored in chrome.storage.
+function restore_options() {
+  // Use default value color = 'red' and likesColor = true.
+  chrome.storage.sync.get({
+    colorOutput: 'hashHex'
+  }, function(items) {
+
+    $('input[value="' + items.colorOutput + '"]').attr('checked', true);
+  });
+}
+
+$(document).ready(function() {
+
+    restore_options()
+    $('input[type=radio][name=colorOutput]').change(function() {
+        save_options();
+
+        // clear_colors();
+        
+        get_output_setting(add_colors);
+    });
+});
+
+document.body.onload = function() {
+  chrome.storage.sync.get("colorOutput", function(items) {
+    if (!chrome.runtime.error) {
+      console.log(items);
+
+          }
+  });
+}
+
+
+
+
             // Colorize header
             $("header").css("background", $color.mainColors.red.hex);
 
-            // Add Sidebar
-            // $.each($color.alternateNames, function(key, data) {
-            //     if (this == "A100") {
-            //         $('.sideBar').append("<hr>")
-            //     };
-            //     $('.sideBar').append(
-            //         '<div class="square">' +
-            //         this + '</div>'
-            //     );
-
-            // });
+        
 
             // Bind on click
             $(".color").click(function() {
@@ -81,7 +125,7 @@
                 $('#headerAlert').delay(1000).fadeOut();
             });
 
-            new Clipboard('.color');
+           var clipboard = new Clipboard('.color');
 
         }
 
@@ -158,3 +202,11 @@ function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16)}
 function hexToG(h) {return parseInt((cutHex(h)).substring(2,4),16)}
 function hexToB(h) {return parseInt((cutHex(h)).substring(4,6),16)}
 function cutHex(h) {return (h.charAt(0)=="#") ? h.substring(1,7):h}
+
+
+            function clear_colors(){
+
+                $('.variations').html('');
+                $('.mainColors').html('');
+
+            }

@@ -211,7 +211,8 @@ hr {
   margin: 0 auto;
   font-weight: bold; }
 
-button, .button {
+button,
+.button {
   background: #f44336; }
 
 .donationOptions {
@@ -243,5 +244,22 @@ button, .button {
     justify-content: center;
     flex-direction: column;
     padding: 10px; }
+  .outputOptions.small {
+    width: 50%;
+    margin: 0 auto;
+    flex-direction: row; }
+    .outputOptions.small .option {
+      padding: 0 5px; }
+      .outputOptions.small .option label {
+        cursor: pointer;
+        padding: 0px 5px;
+        transition: all 300ms; }
+    .outputOptions.small input {
+      height: 0; }
+      .outputOptions.small input:checked ~ label {
+        font-weight: bold;
+        background: #f00;
+        color: #fff;
+        padding: 0px 5px; }
 
 /*# sourceMappingURL=style.css.map */

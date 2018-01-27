@@ -52,9 +52,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row;
-
-    // margin: 0 0 5px 0;
+    flex-direction: row; // margin: 0 0 5px 0;
     padding: 10px 25px;
     background: $red;
     box-shadow: 0 2px 3px transparentize(#000, 0.8);
@@ -120,9 +118,7 @@ hr {
 .square {
     background: #fff;
     width: $squareSize;
-    height: $squareSize;
-
-    // margin: 2px;
+    height: $squareSize; // margin: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,7 +156,8 @@ hr {
     font-weight: bold;
 }
 
-button, .button {
+button,
+.button {
     background: $red;
 }
 
@@ -196,11 +193,35 @@ button, .button {
     align-items: center;
     justify-content: space-between;
 
+
     .option {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         padding: 10px;
+    }
+    &.small {
+        width: 50%;
+        margin: 0 auto;
+        flex-direction: row;
+        .option {
+            padding: 0 5px;
+            label {
+                cursor: pointer;
+                padding: 0px 5px;transition:all 300ms;
+            }
+        }
+        input {
+            height: 0;
+            &:checked {
+                &~label {
+                    font-weight: bold;
+                    background: #f00;
+                    color: #fff;
+                    padding: 0px 5px;
+                }
+            }
+        }
     }
 }
