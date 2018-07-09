@@ -3,11 +3,12 @@
  This page is shown when the extension button is clicked, because the
  "browser_action" field in manifest.json contains the "default_popup" key with
  value "popup.html".
- -->
+ --> 
 <html>
   <head>
     <title>Material Color Picker</title>
 
+ <meta charset="UTF-8">
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
       - Policy documentation[1] for details and explanation.
@@ -27,6 +28,12 @@
     <header><a href="/popup.html"><h1><i class="fa fa-angle-left" aria-hidden="true"></i> 
 Material Color Picker</h1></a>
       <span class="alert" id='headerAlert'></span>
+      <select id="outputOptions" class="outputOptions">
+        <option value="hashHex">#HEX</option>
+        <option value="hex">HEX</option>
+        <option value="rgb">RGB</option>
+        <option value="rgba">RGBA</option>
+      </select>
       <nav><ul>
         <li><a href="options.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i></a></li>
         <li><a href="about.html"><i class="fa fa-question fa-fw" aria-hidden="true"></i></a></li>
@@ -41,7 +48,7 @@ Material Color Picker</h1></a>
     <div class="variations">
       
     </div>
-    <div class="outputOptions small">
+<!--     <div class="outputOptions small">
     <div class="option">
         <input type="radio" id="colorOutput1" name="colorOutput" value="hashHex" checked>
         <label for="colorOutput1">#HEX</label>
@@ -58,7 +65,7 @@ Material Color Picker</h1></a>
         <input type="radio" id="colorOutput4" name="colorOutput" value="rgba">
         <label for="colorOutput4">RGBA</label>
     </div>
-</div>
+</div> -->
   </div>
 
   
