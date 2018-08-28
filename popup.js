@@ -94,7 +94,7 @@ function add_colors(output) {
 
     document.body.onload = function() {
         chrome.storage.sync.get("colorOutput", function(items) {
-            if (!chrome.runtime.error) {
+            if (items) {
                 console.log(items);
 
             }
