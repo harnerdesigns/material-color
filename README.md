@@ -4,7 +4,7 @@ An extension for Google Firefox that provides the Color Codes for Google's Mater
 
 ## Install 
 
-<!-- ### [Download From The Google Chrome Store](https://chrome.google.com/webstore/detail/material-color-palette-cl/daejjicekmhkbpgahnhfmpmjhojhpane) -->
+# [MaterialColor.xyz](https://materialcolor.xyz)
 
 ### Install Locally
 
@@ -38,7 +38,7 @@ Harner Designs is a full service Web & Graphic Design studio. Providing Clean, R
 
 ## Like the App? Wanna Buy Us A Beer?
 
-If you like this Chrome Extension and would like to by us a beer, We'd be flattered.
+If you like this Extension and would like to by us a beer, We'd be flattered.
 
 | Paypal | Bitcoin | Litecoin |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------|------------------------------------|

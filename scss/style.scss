@@ -9,7 +9,7 @@ $maxWidth: $squareSize * $numberofColors;
     box-sizing: border-box;
 }
 
-html {
+html { 
      
     font-family: "Roboto", sans-serif;
 }
@@ -49,7 +49,7 @@ body {
 container {
     display: flex;
     align-items: center;
-    justify-conent: center;
+    justify-content: center;
     width: $maxWidth;
     max-width: 100vw;
     z-index: 8;
@@ -99,6 +99,14 @@ header {
                     color: inherit;
                 }
             }
+        }
+    }
+
+    select{
+        padding: 0.25em;
+
+        option{
+            padding: 0.25em;
         }
     }
 }

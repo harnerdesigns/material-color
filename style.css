@@ -130,7 +130,7 @@ body {
 container {
   display: flex;
   align-items: center;
-  justify-conent: center;
+  justify-content: center;
   width: 646px;
   max-width: 100vw;
   z-index: 8; }
@@ -166,6 +166,10 @@ header {
       font-size: 2em; }
       header nav ul li a {
         color: inherit; }
+  header select {
+    padding: 0.25em; }
+    header select option {
+      padding: 0.25em; }
 
 hr {
   border: 0;
