@@ -1,10 +1,10 @@
-# Material Color Chrome Extension
+# Material Color Firefox Extension
 
-An extension for Google Chrome that provides the Color Codes for Google's Material design color pallete instantly. No more digging through the Material docs to find a single Hex Code.
+An extension for Google Firefox that provides the Color Codes for Google's Material design color pallete instantly. No more digging through the Material docs to find a single Hex Code.
 
 ## Install 
 
-### [Download From The Google Chrome Store](https://chrome.google.com/webstore/detail/material-color-palette-cl/daejjicekmhkbpgahnhfmpmjhojhpane)
+<!-- ### [Download From The Google Chrome Store](https://chrome.google.com/webstore/detail/material-color-palette-cl/daejjicekmhkbpgahnhfmpmjhojhpane) -->
 
 ### Install Locally
 
@@ -13,10 +13,11 @@ Clone the repo
 ```
 git clone https://github.com/harnerdesigns/material-color.git
 ```
+Switch to the master-ff branch ```git checkout master-ff```
 
-Go to ```Chrome://extensions``` and make sure ```Developer mode``` is checked.
+Go to ```about:debugging```.
 
-Click ```Load unpacked extension...``` and navigate to the folder you cloned above.
+Click ```Load temporary add-on``` and select any file in the folder you cloned above.
 
 
 
