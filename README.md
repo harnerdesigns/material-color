@@ -13,7 +13,6 @@ Clone the repo
 ```
 git clone https://github.com/harnerdesigns/material-color.git
 ```
-Switch to the master-ff branch ```git checkout master-ff```
 
 Go to ```about:debugging```.
 
