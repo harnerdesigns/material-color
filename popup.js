@@ -154,7 +154,9 @@ function color(hex, output) {
         case "hsl":
             convertedHex = convert_rgb_to_hsl(convert_hex_to_rgb(hex, true));
             break;
-
+        case "hsla":
+            convertedHex = convert_rgb_to_hsl(convert_hex_to_rgb(hex, true), true);
+            break;
         default:
             convertedHex = hex;
             break;
@@ -213,7 +215,7 @@ function convert_hex_to_hex(hex) {
 
 }
 
-function convert_rgb_to_hsl(rgb) {
+function convert_rgb_to_hsl(rgb, alpha = false) {
 
     r = rgb.r;
     g = rgb.g;
@@ -260,8 +262,15 @@ function convert_rgb_to_hsl(rgb) {
     // Multiply l and s by 100
     s = +(s * 100).toFixed(1);
     l = +(l * 100).toFixed(1);
-    hsl = "hsl(" + h + "," + s + "%," + l + "%)";
-    console.log(hsl);
+    if(alpha){
+
+
+        hsl = "hsla(" + h + ", " + s + "%, " + l + "%, 1)";
+
+    } else {
+
+        hsl = "hsl(" + h + ", " + s + "%, " + l + "%)";
+    }
     return hsl;
 
 }
