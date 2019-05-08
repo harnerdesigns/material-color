@@ -1,6 +1,6 @@
 {
   "name": "material-color",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "Material Color Picker Chrome Extension",
   "main": "manifest.json",
   "scripts": {

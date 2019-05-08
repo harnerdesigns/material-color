@@ -29,6 +29,8 @@ body {
 }
 
 .pallete {
+    overflow-y: hidden;
+
     header {
         h1 {
             i {
@@ -120,10 +122,14 @@ hr {
 
 .main {
     margin: 0 auto;
-    width: 70%;
+    width: 90%;
     p {
         width:100%;
         display: block;
+    }
+
+    img{
+        max-width: 100%;
     }
 }
 
@@ -161,7 +167,12 @@ hr {
     text-shadow: none;
     font-weight: bold;
 }
+ img.logo{
 
+    max-width: 80%;
+    height: auto;
+    margin: 1em auto;
+ }
 .color {
     @extend .square;
 

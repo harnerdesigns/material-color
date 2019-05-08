@@ -25,8 +25,10 @@ $(document).ready(function() {
 // Get colorOutput and call callback function
 function get_output_setting(callback) {
     var storageItems = chrome.storage.sync.get("colorOutput", function(items) {
+
         callback(items.colorOutput);
     });
+    
 }
 
 // Generate the colors and selection based on output setting
@@ -35,6 +37,7 @@ function add_colors(output) {
     clear_colors();
 
     $.each($color.mainColors, function(key, data) {
+        console.log("SHIT:" + color(this.hex, output) + " Output: " + output);
         $('.mainColors').append(
             '<div class="color" data-clipboard-text="' + color(this.hex, output) + '" style="background:' + this.hex + '" data-hex="' + this.hex + '" id="' + key + '">' +
             this.name + '</div>'
@@ -46,8 +49,9 @@ function add_colors(output) {
             if (keys === "A100") {
                 $('#colorset-' + key).append("<hr>")
             };
+            var hex = color(this, output)
             $('#colorset-' + key).append(
-                '<div class="color" data-clipboard-text="' + color(this, output) + '" style="background:' + this + '" title="' + color(this, output) + '" data-hex="' + this + '" id="' + keys + '"></div>'
+                '<div class="color" data-clipboard-text="' + hex + '" style="background:' + this + '" title="' + hex + '" data-hex="' + this + '" id="' + keys + '"></div>'
             );
         });
 
@@ -75,7 +79,6 @@ function add_colors(output) {
         chrome.storage.sync.get({
             colorOutput: 'hashHex'
         }, function(items) {
-            console.log('#outputOptions option[value="' + items.colorOutput + '"]')
             $('#outputOptions option[value="' + items.colorOutput + '"]').attr('selected', "selected");
         });
     }
@@ -134,6 +137,7 @@ function add_colors(output) {
 function color(hex, output) {
 
 
+    console.log("Switch:"+output);
     switch (output) {
         case "hashHex":
             convertedHex = hex;
@@ -147,6 +151,10 @@ function color(hex, output) {
         case "rgba":
             convertedHex = convert_hex_to_rgba(hex);
             break;
+        case "hsl":
+            convertedHex = convert_rgb_to_hsl(convert_hex_to_rgb(hex, true));
+            break;
+
         default:
             convertedHex = hex;
             break;
@@ -158,19 +166,26 @@ function color(hex, output) {
 
 
 
-function convert_hex_to_rgb(hex) {
+function convert_hex_to_rgb(hex, asArray = false) {
 
     R = hexToR(hex);
     G = hexToG(hex);
     B = hexToB(hex);
 
-    var rgb = "rgb(";
-    rgb += R;
-    rgb += ",";
-    rgb += G;
-    rgb += ",";
-    rgb += B;
-    rgb += ")";
+        if(asArray){
+
+            rgb = {r: R, g: G, b: B};
+
+        } else {
+
+            var rgb = "rgb(";
+            rgb += R;
+            rgb += ",";
+            rgb += G;
+            rgb += ",";
+            rgb += B;
+            rgb += ")";
+        }
     return rgb;
 }
 
@@ -195,6 +210,59 @@ function convert_hex_to_rgba(hex) {
 function convert_hex_to_hex(hex) {
     hex = hex.replace(/([#])/g, "");
     return hex;
+
+}
+
+function convert_rgb_to_hsl(rgb) {
+
+    r = rgb.r;
+    g = rgb.g;
+    b = rgb.b;
+
+    r /= 255;
+    g /= 255;
+    b /= 255;
+
+    // Find greatest and smallest channel values
+    let cmin = Math.min(r, g, b),
+        cmax = Math.max(r, g, b),
+        delta = cmax - cmin,
+        h = 0,
+        s = 0,
+        l = 0;
+
+    // Calculate hue
+    // No difference
+    if (delta == 0)
+        h = 0;
+    // Red is max
+    else if (cmax == r)
+        h = ((g - b) / delta) % 6;
+    // Green is max
+    else if (cmax == g)
+        h = (b - r) / delta + 2;
+    // Blue is max
+    else
+        h = (r - g) / delta + 4;
+
+    h = Math.round(h * 60);
+
+    // Make negative hues positive behind 360°
+    if (h < 0)
+        h += 360;
+
+    // Calculate lightness
+    l = (cmax + cmin) / 2;
+
+    // Calculate saturation
+    s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+
+    // Multiply l and s by 100
+    s = +(s * 100).toFixed(1);
+    l = +(l * 100).toFixed(1);
+    hsl = "hsl(" + h + "," + s + "%," + l + "%)";
+    console.log(hsl);
+    return hsl;
 
 }
 
