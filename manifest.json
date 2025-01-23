@@ -3,7 +3,7 @@
 
   "name": "Material Design Color Palette - Click to Copy",
   "description": "Click to copy Material Design color palette. Copy in #HEX HEX RGB( ) RGBA( ).",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "icons": { "16": "icon_16.png",
            "48": "icon_48.png",
           "128": "icon_128.png" },
@@ -14,12 +14,11 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "activeTab",
     "storage"
   ],
   "applications": {
   "gecko": {
-    "id": "material-color@harnerdesigns.com",
+    "id": "material-color@renrah.dev",
     "strict_min_version": "42.0"
   }
 }

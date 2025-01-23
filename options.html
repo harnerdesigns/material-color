@@ -1,70 +1,88 @@
 <!DOCTYPE html>
 <html>
-<head><title>Material Color Palette > Options</title>
- <meta charset="UTF-8">
-  
-<script src="vendor/jquery.min.js"></script>
+  <head>
+    <title>Material Color Palette > Options</title>
+    <meta charset="UTF-8" />
+
+    <script src="vendor/jquery.min.js"></script>
     <script src="vendor/clipboard.min.js"></script>
-    
+
     <link rel="stylesheet" href="vendor/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
-
-</head>
-<body>
-<header><a href="/popup.html"><h1><i class="fa fa-angle-left" aria-hidden="true"></i> Material Color Palette</h1></a>
-      <span class="alert" id='headerAlert'></span>
-      <nav><ul>
-        <li><a href="options.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i></a></li>
-        <li><a href="about.html"><i class="fa fa-question fa-fw" aria-hidden="true"></i></a></li>
-      </ul>
-    </nav></header>
+  </head>
+  <body>
+    <header>
+      <a href="/popup.html"
+        ><h1>
+          <i class="fa fa-angle-left" aria-hidden="true"></i> Material Color
+          Palette
+        </h1></a
+      >
+      <span class="alert" id="headerAlert"></span>
+      <nav>
+        <ul>
+          <li>
+            <a href="options.html"
+              ><i class="fa fa-cog fa-fw" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="about.html"
+              ><i class="fa fa-question fa-fw" aria-hidden="true"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <container>
-    	<div class="main">
+      <div class="main">
         <h1>Settings</h1>
-<h2>#HEX, HEX, RGB, RGBA?</h2>
-<div class="outputOptions">
-  <div class="option">
-    <input type="radio" id="colorOutput1"
-     name="colorOutput" value="hashHex" checked>
-    <label for="colorOutput1">#HEX</label>
-</div><div class="option">
-    <input type="radio" id="colorOutput2"
-     name="colorOutput" value="hex">
-    <label for="colorOutput2">HEX</label>
-</div><div class="option">
-    <input type="radio" id="colorOutput3"
-     name="colorOutput" value="rgb">
-    <label for="colorOutput3">RGB</label> 
-</div><div class="option">
-    <input type="radio" id="colorOutput4"
-     name="colorOutput" value="rgba">
-    <label for="colorOutput4">RGBA</label>
-</div>
-  </div>
+        <h2>#HEX, HEX, RGB, RGBA?</h2>
+        <div class="outputOptions">
+          <div class="option">
+            <input
+              type="radio"
+              id="colorOutput1"
+              name="colorOutput"
+              value="hashHex"
+              checked
+            />
+            <label for="colorOutput1">#HEX</label>
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              id="colorOutput2"
+              name="colorOutput"
+              value="hex"
+            />
+            <label for="colorOutput2">HEX</label>
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              id="colorOutput3"
+              name="colorOutput"
+              value="rgb"
+            />
+            <label for="colorOutput3">RGB</label>
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              id="colorOutput4"
+              name="colorOutput"
+              value="rgba"
+            />
+            <label for="colorOutput4">RGBA</label>
+          </div>
+        </div>
 
+        <div id="status"></div>
+        <button id="save">Save</button>
+      </div>
+    </container>
 
-<div id="status"></div>
-<button id="save">Save</button>
-
-<!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
-<form action="https://harnerdesigns.us17.list-manage.com/subscribe/post?u=46a719d3a1aac50ff6a11182d&amp;id=2d61299f01" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-  <label for="mce-EMAIL">Keep Up With Harner Designs!</label>
-  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_46a719d3a1aac50ff6a11182d_2d61299f01" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-
-<!--End mc_embed_signup-->
-
-</div>
-
-</container>
-
-<script src="options.js"></script>
-</body>
+    <script src="options.js"></script>
+  </body>
 </html>
