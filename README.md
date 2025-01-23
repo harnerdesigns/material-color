@@ -1,6 +1,6 @@
 # Material Color Firefox Extension
 
-An extension for Google Firefox that provides the Color Codes for Google's Material design color pallete instantly. No more digging through the Material docs to find a single Hex Code.
+An extension for Google Chrome & Firefox that provides the Color Codes for Google's Material design color palette instantly. No more digging through the Material docs to find a single Hex Code.
 
 ## Install 
 
